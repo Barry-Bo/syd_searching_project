@@ -1,8 +1,10 @@
 # secrets
-.env
-.env.local
-.env.*.local
+.env*
+!.env.example
 *.key
+*.pem
+credentials.json
+service-account*.json
 
 # python
 __pycache__/
