@@ -1,0 +1,23 @@
+# secrets
+.env
+.env.local
+.env.*.local
+*.key
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# node / next
+node_modules/
+.next/
+out/
+
+# data dumps
+data/raw/
+*.csv
+
+# macOS
+.DS_Store
