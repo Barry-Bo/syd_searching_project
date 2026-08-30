@@ -15,7 +15,7 @@ venv/
 # node / next
 node_modules/
 .next/
-out/
+/out/
 
 # data dumps
 data/raw/

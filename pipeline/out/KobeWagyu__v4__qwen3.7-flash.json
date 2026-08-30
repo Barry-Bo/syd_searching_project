@@ -1,0 +1,54 @@
+{
+  "适合": [
+    {
+      "人群或场合": "生日庆祝",
+      "依据": "提供生日客人半价优惠，体验性价比高",
+      "提及": 2,
+      "评论编号": [
+        1,
+        5
+      ],
+      "原句": "The highlight was the birthday promotion where the birthday guest receives 50% off, which made the experience even better value."
+    }
+  ],
+  "慎选": [],
+  "必点": [
+    {
+      "菜名": "Wagyu",
+      "提及": 4,
+      "评论编号": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "原句": "The highlight is definitely the Wagyu—the marbling was great and it actually tasted fresh, not like the frozen stuff you get elsewhere."
+    },
+    {
+      "菜名": "Mango Mochi",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "They had an amazing mango mochi was INSANE! I loved the texture of the mochi and the mango flavour was insanely delicious."
+    },
+    {
+      "菜名": "Buttered Corn / Cheesy Corn",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "We had plenty of the Buttered Corn as well as the Cheesy Corn! A good touch is too add it into the rice together it's amazing!"
+    }
+  ],
+  "高频负面词": [],
+  "场景标签": [
+    "family",
+    "friends"
+  ],
+  "场景依据": "评论 2 明确提到 suitable for ... outing with family or friends；评论 1 和 5 提及多人共同庆祝生日",
+  "vibe": [
+    "上菜快"
+  ],
+  "一致性": "高"
+}

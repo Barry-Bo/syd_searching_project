@@ -1,0 +1,83 @@
+{
+  "适合": [
+    {
+      "人群或场合": "带小孩的家庭",
+      "依据": "店员会主动给小朋友食物并陪伴娱乐",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "they even gave my little one a croissant and kept him entertained"
+    },
+    {
+      "人群或场合": "朋友聚会",
+      "依据": "环境安静且适合多人聚餐",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "Quite and best place for gatherings"
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "对咖啡品质有要求的人",
+      "原因": "出品易出错且口味不佳",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "They kinda mixup with my coffee for cappuccino when I ordered flat white."
+    },
+    {
+      "提醒": "想吃热食甜点的人",
+      "原因": "部分糕点内馅偏凉",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "the filling was cold"
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Waffle Like Jagger",
+      "提及": 2,
+      "评论编号": [
+        1,
+        5
+      ],
+      "原句": "Waffle Like Jagger is a kind of dessert that absolutely scrumptious!"
+    },
+    {
+      "菜名": "Fritter Sweet Symphony",
+      "提及": 2,
+      "评论编号": [
+        1,
+        5
+      ],
+      "原句": "Fritter Sweet Symphony as salmon go well with crispy corn fritters and creamy avocado, so unique and so delicious."
+    },
+    {
+      "菜名": "XO prawn noodles",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "The XO prawn noodles were flavourful with just a mild kick"
+    }
+  ],
+  "高频负面词": [
+    "内馅偏凉"
+  ],
+  "场景标签": [
+    "family",
+    "friends"
+  ],
+  "场景依据": "评论 2 提到 'my little one' 及店员照顾儿童；评论 4 明确提及 'best place for gatherings'",
+  "vibe": [
+    "安静",
+    "上菜快"
+  ],
+  "一致性": "高"
+}

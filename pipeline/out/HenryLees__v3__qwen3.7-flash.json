@@ -1,0 +1,97 @@
+{
+  "适合": [
+    {
+      "人群或场合": "带小孩的家庭",
+      "依据": "评论2详细记录店员为小朋友赠送可颂并全程陪伴娱乐，适合亲子出行",
+      "提及": 1,
+      "评论编号": [
+        2
+      ]
+    },
+    {
+      "人群或场合": "朋友聚会",
+      "依据": "评论4直接标注为best place for gatherings，且评论1、5描述的brunch形式与多道主菜适合多人共享",
+      "提及": 3,
+      "评论编号": [
+        1,
+        4,
+        5
+      ]
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "对咖啡出品有要求的人",
+      "原因": "点单易被弄错",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "They kinda mixup with my coffee for cappuccino when I ordered flat white."
+    },
+    {
+      "提醒": "喜欢热食甜点的人",
+      "原因": "部分糕点内馅温度偏低",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "the filling was cold"
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Waffle dessert",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "The highlight was definitely the waffle dessert—super crispy with a rich coffee sauce that wasn't overly sweet, paired perfectly with vanilla ice cream."
+    },
+    {
+      "菜名": "XO prawn noodles",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "The XO prawn noodles were flavourful with just a mild kick,"
+    },
+    {
+      "菜名": "salmon with corn fritter",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "the salmon with corn fritter was fresh and well-balanced."
+    },
+    {
+      "菜名": "Smells Like Crab Spirit",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "I love Smells Like Crab Spirit as it is so tasty."
+    },
+    {
+      "菜名": "Fritter Sweet Symphony",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "I also love Fritter Sweet Symphony as salmon go well with crispy corn fritters and creamy avocado, so unique and so delicious."
+    }
+  ],
+  "高频负面词": [
+    "内馅偏凉"
+  ],
+  "场景标签": [
+    "family",
+    "friends"
+  ],
+  "场景依据": "评论 2 提到 my little one 与 as a parent；评论 4 提到 best place for gatherings",
+  "vibe": [
+    "安静",
+    "上菜快"
+  ],
+  "一致性": "高"
+}

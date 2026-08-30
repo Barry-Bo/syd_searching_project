@@ -1,0 +1,72 @@
+{
+  "适合": [
+    {
+      "人群或场合": "生日庆祝与亲友聚餐",
+      "依据": "评论 2 明确推荐用于生日及亲友外出；评论 5 指出氛围适合特殊场合",
+      "提及": 2,
+      "评论编号": [
+        2,
+        5
+      ],
+      "原句": "suitable for birthdays, dinners, outing with family or friends!"
+    }
+  ],
+  "慎选": [],
+  "必点": [
+    {
+      "菜名": "Wagyu",
+      "提及": 4,
+      "评论编号": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "原句": "Wagyu was insane. So incredibly soft and succulent."
+    },
+    {
+      "菜名": "Buttered Corn",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "A good touch is too add it into the rice together it's amazing!"
+    },
+    {
+      "菜名": "Cheesy Corn",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "A good touch is too add it into the rice together it's amazing!"
+    },
+    {
+      "菜名": "Mango Mochi",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "They had an amazing mango mochi was INSANE!"
+    },
+    {
+      "菜名": "Sushi",
+      "提及": 3,
+      "评论编号": [
+        1,
+        2,
+        3
+      ],
+      "原句": "Also tired some of the shushi which was amazing!"
+    }
+  ],
+  "高频负面词": [],
+  "场景标签": [
+    "friends",
+    "family"
+  ],
+  "场景依据": "评论 2 直接写明 'outing with family or friends'；评论 5 指出 'atmosphere was great for a special occasion' 并强调生日聚餐体验",
+  "vibe": [
+    "上菜快"
+  ],
+  "一致性": "高"
+}

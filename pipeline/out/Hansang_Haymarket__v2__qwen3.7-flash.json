@@ -1,0 +1,100 @@
+{
+  "适合": [
+    {
+      "人群或场合": "食量较大或追求饱腹感的食客",
+      "依据": "评论1和评论5均指出份量普遍较大且食物扎实管饱（big portions/hearty）",
+      "提及": 2,
+      "评论编号": [
+        1,
+        5
+      ]
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "想悠闲用餐或久坐聊天的人",
+      "原因": "店员会在用餐结束后迅速收走所有餐具并暗示离店，存在明显的翻台施压行为",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "his actions came across as passive-aggressive, and it felt like we were being pressured to leave the restaurant"
+    },
+    {
+      "提醒": "不吃内脏或对外国菜系不熟悉的外国游客",
+      "原因": "传统猪肉汤锅内含大量猪内脏及面部部位，但菜单未标注且服务员未作任何提示",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "No one informed us, nor was it clearly highlighted, that this pot is packed with pig internal organs and parts of the face, including tongue and ears."
+    },
+    {
+      "提醒": "对肉质和口味要求较高的食客",
+      "原因": "牛尾和毛肚汤的肉量偏少，且整体调味偏淡",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "There could have been alot more meat especially with the pricing of the dishes. I also wish the flavour was just abit stronger."
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "泡菜饼",
+      "提及": 2,
+      "评论编号": [
+        1,
+        5
+      ],
+      "原句": "kimchi pancake"
+    },
+    {
+      "菜名": "炸鸡",
+      "提及": 2,
+      "评论编号": [
+        1,
+        5
+      ],
+      "原句": "friend chicken"
+    },
+    {
+      "菜名": "米肠",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "From soondae, pork to kimchi pancake"
+    },
+    {
+      "菜名": "拌饭",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "Have tried their bibimbap and bulgogi - both good"
+    },
+    {
+      "菜名": "韩式烤肉",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "Have tried their bibimbap and bulgogi - both good"
+    }
+  ],
+  "高频负面词": [
+    "肉量少",
+    "调味偏淡"
+  ],
+  "场景标签": [
+    "date",
+    "friends"
+  ],
+  "场景依据": "评论 2 提到 as a table of two；评论 5 提到 opportunities to indulge in soju，评论 1 提到 portions are quite big",
+  "vibe": [
+    "上菜快",
+    "翻台快"
+  ],
+  "一致性": "中"
+}
