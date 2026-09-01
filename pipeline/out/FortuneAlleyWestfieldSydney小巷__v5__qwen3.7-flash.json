@@ -1,0 +1,79 @@
+{
+  "适合": [
+    {
+      "人群或场合": "预算有限或食量较大的人",
+      "依据": "人均消费极低且分量充足能吃饱",
+      "提及": 2,
+      "评论编号": [
+        1,
+        4
+      ],
+      "原句": "人均个位数真吃得饱!!"
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "赶时间的人",
+      "原因": "现点现做流程耗时较长",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "就是需要点耐心没有自选的快"
+    },
+    {
+      "提醒": "介意支付手续费的人",
+      "原因": "信用卡加收2%但现金支付价格无优惠",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "they charge an extra 2% for CC but when I offered cash the price remained the same."
+    },
+    {
+      "提醒": "搭配素食或追求菜品多样性的人",
+      "原因": "蔬菜品质不佳且建议跳过",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "Veggies are lame, I would skip this"
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Sweet and Sour Pork",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "sweet and sour pork, and eggplant with potato — and everything was hot, fresh, and super tasty."
+    },
+    {
+      "菜名": "Eggplant with Potato",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "sweet and sour pork, and eggplant with potato — and everything was hot, fresh, and super tasty."
+    },
+    {
+      "菜名": "Beef in Tomato Stew",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "My favorite was the beef -- incredible flavor."
+    }
+  ],
+  "高频负面词": [
+    "口味单一",
+    "蔬菜品质差"
+  ],
+  "场景标签": [],
+  "场景依据": null,
+  "vibe": [
+    "上菜慢"
+  ],
+  "一致性": "中"
+}

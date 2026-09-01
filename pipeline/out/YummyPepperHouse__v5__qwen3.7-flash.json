@@ -1,0 +1,39 @@
+{
+  "适合": [],
+  "慎选": [],
+  "必点": [
+    {
+      "菜名": "boiled fish",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "Highly recommend the boiled fish, spicy chicken, and mapo tofu if you love traditional Sichuan cuisine."
+    },
+    {
+      "菜名": "spicy chicken",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "Highly recommend the boiled fish, spicy chicken, and mapo tofu if you love traditional Sichuan cuisine."
+    },
+    {
+      "菜名": "mapo tofu",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "Highly recommend the boiled fish, spicy chicken, and mapo tofu if you love traditional Sichuan cuisine."
+    }
+  ],
+  "高频负面词": [],
+  "场景标签": [
+    "friends"
+  ],
+  "场景依据": "评论 2 提到 generous portions；评论 5 提到 us",
+  "vibe": [
+    "上菜快"
+  ],
+  "一致性": "高"
+}

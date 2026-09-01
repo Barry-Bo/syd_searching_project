@@ -1,0 +1,45 @@
+{
+  "适合": [],
+  "慎选": [],
+  "必点": [
+    {
+      "菜名": "Pig Trotters",
+      "提及": 3,
+      "评论编号": [
+        1,
+        2,
+        5
+      ],
+      "原句": "The pork trotter is very tasty and soft"
+    },
+    {
+      "菜名": "Ribs",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "Loved the pig trotters and ribs!"
+    },
+    {
+      "菜名": "Beef Brisket",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "beef brisket good too"
+    },
+    {
+      "菜名": "Spicy Radish",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "The side dish spicy radish is yummy also"
+    }
+  ],
+  "高频负面词": [],
+  "场景标签": [],
+  "场景依据": null,
+  "vibe": [],
+  "一致性": "高"
+}

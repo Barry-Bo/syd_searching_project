@@ -1,0 +1,42 @@
+{
+  "适合": [
+    {
+      "人群或场合": "预算有限者",
+      "依据": "14美元可得超大份米饭配三道菜及免费饮料",
+      "提及": 2,
+      "评论编号": [
+        1,
+        5
+      ],
+      "原句": "For $14, you'll get MOUNTAINEOUS rice with 3 dishes, which also comes with a free drink!"
+    },
+    {
+      "人群或场合": "家庭聚餐",
+      "依据": "13美元能买到足够四个人的食物",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "for just 13 bucks you get more than enough food for a family of four!"
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "使用信用卡支付的顾客",
+      "原因": "刷卡可能被多收费用",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "And today they tried to make me pay $17 when I tap the card if I did not see the pos machine."
+    }
+  ],
+  "必点": [],
+  "高频负面词": [],
+  "场景标签": [
+    "family"
+  ],
+  "场景依据": "评论 1 提到 'a family of four'",
+  "vibe": [],
+  "一致性": "高"
+}

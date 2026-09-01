@@ -1,18 +1,29 @@
 {
-  "适合": [],
+  "适合": [
+    {
+      "人群或场合": "胃口大的人",
+      "依据": "菜品分量普遍较大",
+      "提及": 2,
+      "评论编号": [
+        1,
+        5
+      ],
+      "原句": "Portions are generally quite big, especially the pancakes."
+    }
+  ],
   "慎选": [
     {
-      "提醒": "想久坐聊天的人",
-      "原因": "用餐未满规定时长即被店员清桌催促",
+      "提醒": "想慢慢用餐聊天的人",
+      "原因": "用餐中途被店员催促并收走餐具",
       "提及": 1,
       "评论编号": [
         2
       ],
-      "原句": "pressuring paying customers to leave well before that limit is unacceptable service."
+      "原句": "At that point, his actions came across as passive-aggressive, and it felt like we were being pressured to leave the restaurant."
     },
     {
-      "提醒": "追求分量和浓郁口味的人",
-      "原因": "肉类偏少且调味偏淡",
+      "提醒": "对肉质和口味要求高的人",
+      "原因": "肉类分量不足且调味偏淡",
       "提及": 1,
       "评论编号": [
         3
@@ -20,13 +31,13 @@
       "原句": "There could have been alot more meat especially with the pricing of the dishes. I also wish the flavour was just abit stronger."
     },
     {
-      "提醒": "不吃内脏的外国游客",
-      "原因": "热门汤锅含大量猪内脏及面部部位但菜单未明确提示",
+      "提醒": "不吃内脏的游客",
+      "原因": "汤锅含大量猪内脏及面部部位但菜单无明确提示",
       "提及": 1,
       "评论编号": [
         4
       ],
-      "原句": "Tourists, beware if you do not eat offal."
+      "原句": "No one informed us, nor was it clearly highlighted, that this pot is packed with pig internal organs and parts of the face, including tongue and ears."
     }
   ],
   "必点": [
@@ -37,7 +48,7 @@
         1,
         5
       ],
-      "原句": "My favourites are their stews, friend chicken, and general dishes."
+      "原句": "From soondae, pork to kimchi pancake, fried chicken, to all its glorious soups"
     },
     {
       "菜名": "Kimchi Pancake",
@@ -45,7 +56,7 @@
       "评论编号": [
         5
       ],
-      "原句": "From soondae, pork to kimchi pancake, fried chicken, to all its glorious soups,"
+      "原句": "From soondae, pork to kimchi pancake, fried chicken, to all its glorious soups"
     },
     {
       "菜名": "Soondae",
@@ -53,15 +64,17 @@
       "评论编号": [
         5
       ],
-      "原句": "From soondae, pork to kimchi pancake, fried chicken, to all its glorious soups,"
+      "原句": "From soondae, pork to kimchi pancake, fried chicken, to all its glorious soups"
     }
   ],
   "高频负面词": [
     "分量小",
     "偏淡"
   ],
-  "场景标签": [],
-  "场景依据": null,
+  "场景标签": [
+    "date"
+  ],
+  "场景依据": "评论 2 提到 'a table of two'",
   "vibe": [
     "上菜快",
     "翻台快"

@@ -1,0 +1,84 @@
+{
+  "适合": [
+    {
+      "人群或场合": "家庭聚会",
+      "依据": "提供宝宝椅、有包间和大桌",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "家庭聚餐选这里太对了，长辈和小孩都很满意"
+    },
+    {
+      "人群或场合": "多人聚餐",
+      "依据": "空间宽敞且桌椅布局可适应不同人数",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "the restaurant was spacious and set up for different numbers of groups"
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "追求现做菜品的食客",
+      "原因": "菜品为预制菜",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "全是预制菜"
+    },
+    {
+      "提醒": "赶时间的人",
+      "原因": "现场片鸭需等待",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "because sometimes everyone else is doing it, you do have to wait a bit for your turn"
+    },
+    {
+      "提醒": "想多吃配菜的食客",
+      "原因": "鸭饼配菜分量有限",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "you will find yourself with limited amount of pickled vegetables, spring onion etc"
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Peking Duck",
+      "提及": 2,
+      "评论编号": [
+        4,
+        5
+      ],
+      "原句": "the famed Peking Duck, it was done perfectly with crisp skin etc"
+    },
+    {
+      "菜名": "Shangdong Chicken",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "Shangdong Chicken, pancakes were all quite tasty"
+    }
+  ],
+  "高频负面词": [
+    "预制菜",
+    "偏咸",
+    "没味"
+  ],
+  "场景标签": [
+    "family"
+  ],
+  "场景依据": "评论 1 明确提及“家庭聚餐”与“长辈和小孩”",
+  "vibe": [
+    "空间宽敞",
+    "上菜慢"
+  ],
+  "一致性": "中"
+}

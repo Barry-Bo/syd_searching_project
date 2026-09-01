@@ -9,6 +9,7 @@
   3. 「评论编号」指向的评论是否真的包含该内容（防张冠李戴）
   4. 「必点」是否抽成了品类词而非具体菜品
 """
+import difflib
 import json
 import re
 import sys
@@ -19,6 +20,24 @@ CATEGORY_WORDS = {"stews", "stew", "soups", "soup", "dishes", "dish", "side dish
 
 def norm(s):
     return re.sub(r"\s+", " ", s).strip().lower()
+
+
+def near(key, text, ratio=0.85):
+    """key 是否以「几乎相同」的形式出现在 text 里。
+
+    用于容忍 prompt 明确要求的笔误修正：评论写 "smelly bean curb"，
+    菜名输出 "smelly bean curd"，字面子串匹配会误判为幻觉。
+    对同长度滑动窗口做相似度比较，只放过一两个字符的差异。
+    """
+    n = len(key)
+    if n < 4 or n > len(text):
+        return False
+    m = difflib.SequenceMatcher(a=key)
+    for i in range(len(text) - n + 1):
+        m.set_seq2(text[i:i + n])
+        if m.quick_ratio() >= ratio and m.ratio() >= ratio:
+            return True
+    return False
 
 
 def main():
@@ -64,7 +83,10 @@ def main():
                 if field == "必点" and item.get("菜名"):
                     checks += 1
                     key = norm(item["菜名"]).split("(")[0].strip()
-                    hit = any(key in norm(reviews[n - 1]) for n in nums if 1 <= n <= len(reviews))
+                    cited_ = [norm(reviews[n - 1]) for n in nums if 1 <= n <= len(reviews)]
+                    # 允许笔误修正：v5 规则明确要求把评论里的拼写错误改对
+                    # （如 "smelly bean curb" -> "curd"），所以做近似匹配而非字面匹配
+                    hit = any(key in c or near(key, c) for c in cited_)
                     if not hit and len(key) > 3:
                         fails.append(f"[必点] 「{item['菜名']}」在它引用的评论 {nums} 里找不到")
             # 4. 品类词

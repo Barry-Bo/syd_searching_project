@@ -1,28 +1,28 @@
 {
   "适合": [
     {
-      "人群或场合": "带小孩的家庭",
-      "依据": "店员会主动给儿童提供食物并陪伴玩耍",
-      "提及": 1,
-      "评论编号": [
-        2
-      ],
-      "原句": "they even gave my little one a croissant and kept him entertained"
-    },
-    {
       "人群或场合": "朋友聚会",
-      "依据": "环境安静且适合多人聚餐",
+      "依据": "环境安静且被明确推荐为聚餐地点",
       "提及": 1,
       "评论编号": [
         4
       ],
       "原句": "Quite and best place for gatherings"
+    },
+    {
+      "人群或场合": "带小孩的家庭",
+      "依据": "店员会主动提供儿童点心并负责陪伴娱乐",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "they even gave my little one a croissant and kept him entertained"
     }
   ],
   "慎选": [
     {
-      "提醒": "对咖啡出品稳定性有要求的人",
-      "原因": "点单时易被弄错饮品",
+      "提醒": "点咖啡的顾客",
+      "原因": "容易将平白拿铁错做成卡布奇诺",
       "提及": 1,
       "评论编号": [
         4
@@ -30,8 +30,8 @@
       "原句": "They kinda mixup with my coffee for cappuccino when I ordered flat white."
     },
     {
-      "提醒": "喜欢热馅点心的人",
-      "原因": "部分点心内馅偏凉",
+      "提醒": "想吃热食甜点的顾客",
+      "原因": "可颂内馅端上桌时处于冷却状态",
       "提及": 1,
       "评论编号": [
         3
@@ -47,7 +47,7 @@
         1,
         5
       ],
-      "原句": "The highlight was definitely the waffle dessert—super crispy with a rich coffee sauce that wasn't overly sweet, paired perfectly with vanilla ice cream."
+      "原句": "the waffle dessert—super crispy with a rich coffee sauce that wasn't overly sweet, paired perfectly with vanilla ice cream"
     },
     {
       "菜名": "Fritter Sweet Symphony",
@@ -56,7 +56,7 @@
         1,
         5
       ],
-      "原句": "Fritter Sweet Symphony as salmon go well with crispy corn fritters and creamy avocado, so unique and so delicious."
+      "原句": "Fritter Sweet Symphony as salmon go well with crispy corn fritters and creamy avocado, so unique and so delicious"
     },
     {
       "菜名": "XO prawn noodles",
@@ -64,7 +64,7 @@
       "评论编号": [
         1
       ],
-      "原句": "The XO prawn noodles were flavourful with just a mild kick,"
+      "原句": "The XO prawn noodles were flavourful with just a mild kick"
     },
     {
       "菜名": "Smells Like Crab Spirit",
@@ -72,17 +72,15 @@
       "评论编号": [
         5
       ],
-      "原句": "I love Smells Like Crab Spirit as it is so tasty."
+      "原句": "I love Smells Like Crab Spirit as it is so tasty"
     }
   ],
-  "高频负面词": [
-    "内馅偏凉"
-  ],
+  "高频负面词": [],
   "场景标签": [
-    "family",
-    "friends"
+    "friends",
+    "family"
   ],
-  "场景依据": "评论 2 提到 'my little one' 及店员照顾小孩；评论 4 明确提及 'best place for gatherings'",
+  "场景依据": "评论 4 提到 best place for gatherings；评论 2 提到店员照顾 little one 并提供娱乐",
   "vibe": [
     "安静",
     "上菜快"

@@ -1,0 +1,54 @@
+{
+  "适合": [],
+  "慎选": [
+    {
+      "提醒": "重视服务态度与出品稳定性的食客",
+      "原因": "员工态度差、食物质量令人失望",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "The service is unprofessional, staffs have bad attitudes, and the food quality is unsatisfied."
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "skewers",
+      "提及": 2,
+      "评论编号": [
+        4,
+        5
+      ],
+      "原句": "Love their skewers!! They were so incredibly juicy, perfectly seasoned, and every single bite was just bursting with flavor."
+    },
+    {
+      "菜名": "Chicken wings",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "Chicken wings and lamb skewer was the highlight"
+    },
+    {
+      "菜名": "面",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "面很好吃"
+    },
+    {
+      "菜名": "beef noodle",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "beef noodle was perfect cook with aromatic broth."
+    }
+  ],
+  "高频负面词": [],
+  "场景标签": [],
+  "场景依据": null,
+  "vibe": [],
+  "一致性": "中"
+}

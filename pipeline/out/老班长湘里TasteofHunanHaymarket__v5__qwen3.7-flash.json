@@ -1,0 +1,87 @@
+{
+  "适合": [
+    {
+      "人群或场合": "多人聚餐",
+      "依据": "四人可轻松分享多道菜品",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "四个人点了六道菜"
+    },
+    {
+      "人群或场合": "不太能吃辣的人群",
+      "依据": "不常吃辣也能被味道吸引吃完一整锅",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "i don’t really eat spicy food, but omg it was so addicting to eat"
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "注重卫生与点餐准确性的顾客",
+      "原因": "后厨操作不规范且曾出现漏单拒退情况",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "kitchen hygiene is so bad with chefs wearing no hat"
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "clay pot chicken",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "the clay pot chicken was so so so delicious!!!"
+    },
+    {
+      "菜名": "duck neck entree",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "she gave us a free duck neck entree (it was spicy but super yummy)"
+    },
+    {
+      "菜名": "杨梅汤",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "杨梅汤 （chinese bayberry drink, super super good, i drank it in one gulp, seriously)"
+    },
+    {
+      "菜名": "smelly bean curd",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "The smelly bean curb is good"
+    },
+    {
+      "菜名": "fried egg with vinegar",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "the fried egg with vinegar is good"
+    }
+  ],
+  "高频负面词": [
+    "偏油"
+  ],
+  "场景标签": [
+    "friends",
+    "family"
+  ],
+  "场景依据": "评论 2 明确提到“四个人”；评论 1 和 3 使用“we/us”指代多人同行",
+  "vibe": [
+    "上菜快"
+  ],
+  "一致性": "中"
+}

@@ -1,0 +1,47 @@
+{
+  "适合": [
+    {
+      "人群或场合": "朋友聚餐",
+      "依据": "多位顾客明确提及与朋友同行",
+      "提及": 2,
+      "评论编号": [
+        2,
+        3
+      ],
+      "原句": "went here with a bunch of friends"
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "预算有限的人",
+      "原因": "价格偏高",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "this small bowl of noodles costed over $30"
+    },
+    {
+      "提醒": "肠胃敏感者",
+      "原因": "曾出现腹泻等不适反应",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "Today is the 4th day of me having to deal with diarrhoea, nausea and headache."
+    }
+  ],
+  "必点": [],
+  "高频负面词": [
+    "偏淡"
+  ],
+  "场景标签": [
+    "friends",
+    "family"
+  ],
+  "场景依据": "评论 1 提及 kids；评论 2 提及 with a bunch of friends；评论 3 提及 same group of friends",
+  "vibe": [
+    "空间宽敞"
+  ],
+  "一致性": "中"
+}

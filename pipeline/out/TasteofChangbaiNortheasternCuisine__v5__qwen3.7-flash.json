@@ -1,0 +1,76 @@
+{
+  "适合": [
+    {
+      "人群或场合": "多人聚餐",
+      "依据": "分量充足，适合多人共享多道菜",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "I would recommend to come here in a group - portions are generous and the more people = more dishes you can order!"
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "赶晚餐高峰的人",
+      "原因": "实行分时段翻台制，需提前到占座且座位时间受限",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "This place is mega popular and aims for 2 seatings at 5pm and 7pm. So you basically need to be there and waiting by 4:45pm to ensure a table. They are strict with table seating times."
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Sweet & Sour Crispy Pork",
+      "提及": 3,
+      "评论编号": [
+        1,
+        4,
+        5
+      ],
+      "原句": "Their signature pork (Guo bao rou) definitely lives up to the hype"
+    },
+    {
+      "菜名": "Cold Skin Noodles",
+      "提及": 3,
+      "评论编号": [
+        1,
+        4,
+        5
+      ],
+      "原句": "A really refreshing mix of noodles and sauce."
+    },
+    {
+      "菜名": "Deep Fried Eggplant",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "Don’t miss the deep fried eggplant,"
+    },
+    {
+      "菜名": "Beef Fried Rice",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "Really tasty! Rice is really well fried and there's a good balance of additions within."
+    }
+  ],
+  "高频负面词": [
+    "偏酸",
+    "酱汁味道单一"
+  ],
+  "场景标签": [
+    "friends"
+  ],
+  "场景依据": "评论 5 提到 recommend to come here in a group 且 portions are generous；评论 2 提到 rowdy atmosphere",
+  "vibe": [
+    "嘈杂",
+    "需排队",
+    "翻台快"
+  ],
+  "一致性": "高"
+}

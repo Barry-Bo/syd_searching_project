@@ -1,0 +1,55 @@
+{
+  "适合": [],
+  "慎选": [
+    {
+      "提醒": "赶时间的人",
+      "原因": "出餐慢",
+      "提及": 2,
+      "评论编号": [
+        2,
+        4
+      ],
+      "原句": "can’t get orders out on time"
+    },
+    {
+      "提醒": "对菜品熟度敏感的人",
+      "原因": "鱼类普遍过熟",
+      "提及": 3,
+      "评论编号": [
+        2,
+        3,
+        4
+      ],
+      "原句": "food (fish) was overcooked"
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Barramundi",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "Taste of barramundi was fresh & authentic."
+    },
+    {
+      "菜名": "Chips with coleslaw",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "Combination of chips with coleslaw was amazing."
+    }
+  ],
+  "高频负面词": [
+    "过熟",
+    "偏油",
+    "鱼肉干柴"
+  ],
+  "场景标签": [],
+  "场景依据": null,
+  "vibe": [
+    "上菜慢"
+  ],
+  "一致性": "中"
+}

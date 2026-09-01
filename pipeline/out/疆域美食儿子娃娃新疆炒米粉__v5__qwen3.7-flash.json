@@ -1,0 +1,75 @@
+{
+  "适合": [
+    {
+      "人群或场合": "多人聚餐或分享",
+      "依据": "分量充足、适合多人分食",
+      "提及": 3,
+      "评论编号": [
+        1,
+        4,
+        5
+      ],
+      "原句": "enough for 3 people"
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "注重环境与卫生的顾客",
+      "原因": "店内环境与卫生未达高标准",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "The ambience and hygiene might not score top marks"
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Xinjiang fried rice noodles",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "Absolutely delicious Xinjiang fried rice noodles!"
+    },
+    {
+      "菜名": "过油肉拌面",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "过油肉拌面好吃"
+    },
+    {
+      "菜名": "signature spicy rice noodles with naan combo",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "Their signature spicy rice noodles with naan combo is absolutely amazing"
+    },
+    {
+      "菜名": "cumin lamb ribs",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "paired with tender cumin lamb ribs"
+    },
+    {
+      "菜名": "dapanji",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "and classic dapanji for a satisfying feast after class."
+    }
+  ],
+  "高频负面词": [],
+  "场景标签": [
+    "friends"
+  ],
+  "场景依据": "评论 5 明确提到 '$75.00 for 3 people' 及菜品 'enough for 3 people'，评论 3 提及 'after class'，均指向多人结伴用餐形式。",
+  "vibe": [],
+  "一致性": "高"
+}

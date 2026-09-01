@@ -1,0 +1,90 @@
+{
+  "适合": [
+    {
+      "人群或场合": "家庭聚餐或朋友聚会",
+      "依据": "评论明确推荐用于此类聚餐形式",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "A fantastic place for family dinners or meals with friends"
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "对用餐安静度有要求的人",
+      "原因": "邻座食客咀嚼和吸食声音过大影响体验",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "there is a guy sit next to us that chew and slurp so loud!"
+    },
+    {
+      "提醒": "对菜品调味有特定要求的人",
+      "原因": "部分面条与汤品缺乏风味，且风味茄子酸甜口过重",
+      "提及": 2,
+      "评论编号": [
+        2,
+        5
+      ],
+      "原句": "the noodle lack flavour"
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Crispy Oat Prawns",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "The crispy oat prawns were perfectly crispy on the outside and juicy on the inside."
+    },
+    {
+      "菜名": "牛肉粉丝煲",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "总的来说味道不错也不会踩雷！"
+    },
+    {
+      "菜名": "Eggplant",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "The Eggplant was the best & absolutely delish that I have had so far"
+    },
+    {
+      "菜名": "Chicken with Fried Rice",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "the Chicken & Friend Rice was tasteful & plentiful."
+    },
+    {
+      "菜名": "Duck",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "The duck was juicy & yummy,"
+    }
+  ],
+  "高频负面词": [
+    "调味不足",
+    "偏甜酸"
+  ],
+  "场景标签": [
+    "date",
+    "friends",
+    "family"
+  ],
+  "场景依据": "评论1明确提及family dinners或meals with friends；评论3显示两人同行(My friend & I)；评论5提及quick lunch date。",
+  "vibe": [
+    "嘈杂"
+  ],
+  "一致性": "中"
+}

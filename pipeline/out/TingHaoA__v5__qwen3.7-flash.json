@@ -1,0 +1,88 @@
+{
+  "适合": [
+    {
+      "人群或场合": "适合多人分享/尝试多道菜",
+      "依据": "提供迷你份主菜便于分享",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "On weekdays you can order “mini” portions of some of the main dishes which is great for sharing."
+    },
+    {
+      "人群或场合": "朋友 casual catch up",
+      "依据": "明确推荐为 casual catch up 的地点",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "A good spot for a casual catch up."
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "专程驱车前往或对分量敏感的人",
+      "原因": "有顾客反馈分量过小，且味道未能匹配长途驾驶的预期",
+      "提及": 1,
+      "评论编号": [
+        3
+      ],
+      "原句": "surprised by way too tiny portions"
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Wagyu Jjajangmyeon",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "their Wagyu Jjajangmyeon was delicious as the sauce was not too sweet"
+    },
+    {
+      "菜名": "white Jjamgppong",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "The best one was white Jjamgppong. It was delicious!!!!"
+    },
+    {
+      "菜名": "grilled flamey beef",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "grilled flamey beef was tender and juicy"
+    },
+    {
+      "菜名": "fried chicken",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "I recommend the fried chicken, very tender, crispy and has nice Yuzu sauce."
+    },
+    {
+      "菜名": "tang su yook",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "we loved the tang su yook and yuzu yu rin ki too (spicy)"
+    }
+  ],
+  "高频负面词": [
+    "面糊过厚",
+    "肉质偏柴",
+    "分量小"
+  ],
+  "场景标签": [
+    "friends"
+  ],
+  "场景依据": "评论 1 提到迷你份主菜适合 sharing；评论 5 明确指出是 casual catch up 的好去处",
+  "vibe": [
+    "上菜快"
+  ],
+  "一致性": "中"
+}

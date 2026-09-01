@@ -1,11 +1,13 @@
 {
   "适合": [
     {
-      "人群或场合": "生日庆祝与亲友聚餐",
-      "依据": "明确推荐用于生日、家庭或朋友外出用餐",
-      "提及": 1,
+      "人群或场合": "生日或特殊场合庆祝",
+      "依据": "多位顾客明确提及该店适合举办生日聚会及亲友聚餐",
+      "提及": 3,
       "评论编号": [
-        2
+        1,
+        2,
+        5
       ],
       "原句": "suitable for birthdays, dinners, outing with family or friends!"
     }
@@ -21,7 +23,7 @@
         3,
         5
       ],
-      "原句": "The Wagyu was insane. So incredibly soft and succulent."
+      "原句": "The highlight is definitely the Wagyu—the marbling was great and it actually tasted fresh, not like the frozen stuff you get elsewhere."
     },
     {
       "菜名": "Mango Mochi",
@@ -29,31 +31,15 @@
       "评论编号": [
         2
       ],
-      "原句": "They had an amazing mango mochi was INSANE!"
-    },
-    {
-      "菜名": "Buttered Corn",
-      "提及": 1,
-      "评论编号": [
-        2
-      ],
-      "原句": "We had plenty of the Buttered Corn as well as the Cheesy Corn!"
-    },
-    {
-      "菜名": "Cheesy Corn",
-      "提及": 1,
-      "评论编号": [
-        2
-      ],
-      "原句": "We had plenty of the Buttered Corn as well as the Cheesy Corn!"
+      "原句": "They had an amazing mango mochi was INSANE! I loved the texture of the mochi and the mango flavour was insanely delicious."
     }
   ],
   "高频负面词": [],
   "场景标签": [
-    "family",
-    "friends"
+    "friends",
+    "family"
   ],
-  "场景依据": "评论 2 明确提及 suitable for ... outing with family or friends；评论 1 和 5 多次使用 we 并描述为 birthday dinner，符合多人聚餐特征。",
+  "场景依据": "评论 2 明确提到 outing with family or friends；评论 1 和 5 提及多人共同庆祝生日或特殊场合",
   "vibe": [
     "上菜快"
   ],

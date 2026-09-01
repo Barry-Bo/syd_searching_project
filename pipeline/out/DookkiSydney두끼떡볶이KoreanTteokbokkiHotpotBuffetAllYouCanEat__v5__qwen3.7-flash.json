@@ -1,0 +1,48 @@
+{
+  "适合": [
+    {
+      "人群或场合": "带小孩的家庭",
+      "依据": "餐厅明确标注为家庭友好型，且儿童能参与互动制作汤底",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "Such a fun and family-friendly dining experience at Dookki!"
+    }
+  ],
+  "慎选": [],
+  "必点": [
+    {
+      "菜名": "Tteokbokki",
+      "提及": 2,
+      "评论编号": [
+        1,
+        2
+      ],
+      "原句": "the rice cakes were perfectly chewy"
+    },
+    {
+      "菜名": "Fried chicken",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "The fried chicken and other fried foods have gotten even better recently"
+    },
+    {
+      "菜名": "Popsicles",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "I especially loved the popsicles"
+    }
+  ],
+  "高频负面词": [],
+  "场景标签": [
+    "family"
+  ],
+  "场景依据": "评论 4 明确提到 family-friendly dining experience 以及 kids absolutely loved it",
+  "vibe": [],
+  "一致性": "高"
+}

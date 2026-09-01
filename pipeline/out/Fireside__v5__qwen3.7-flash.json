@@ -1,0 +1,40 @@
+{
+  "适合": [
+    {
+      "人群或场合": "朋友或家庭聚餐",
+      "依据": "明确提及会带朋友或家人再次光顾",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "Will definitely be returning with friends/family."
+    }
+  ],
+  "慎选": [],
+  "必点": [
+    {
+      "菜名": "fried rice noodles",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "The fried rice noodles are great."
+    },
+    {
+      "菜名": "Stir-fried beef",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "Stir-fried beef is also very delicious."
+    }
+  ],
+  "高频负面词": [],
+  "场景标签": [
+    "friends",
+    "family"
+  ],
+  "场景依据": "评论 1 明确提及 'Will definitely be returning with friends/family'",
+  "vibe": [],
+  "一致性": "高"
+}

@@ -1,0 +1,61 @@
+{
+  "适合": [],
+  "慎选": [
+    {
+      "提醒": "追求肉量与食材品质的人",
+      "原因": "肉类分量少且多为脂肪边角料",
+      "提及": 1,
+      "评论编号": [
+        2
+      ],
+      "原句": "Small, disappointing dishes with poor quality cuts and minimal actual meat."
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Crispy Eggplant",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "Crispy Eggplant: The crowd favourite. Crunchy, sweet, savoury perfection. PERFECTION."
+    },
+    {
+      "菜名": "Barramundi with Garlic Sauce",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "Barramundi with Garlic Sauce: Fragrant, fiery, and not for the faint-hearted. A chilli avalanche in the best way possible."
+    },
+    {
+      "菜名": "Sizzling Lamb Chops",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "Sizzling Lamb Chops: A bit fatty, meat tender and full of flavour."
+    },
+    {
+      "菜名": "Stir-fried Cauliflower",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "Stir-fried Cauliflower: Yummy , loaded with garlic, chilli and a cheeky bit of grease."
+    }
+  ],
+  "高频负面词": [
+    "肉量少",
+    "偏肥腻",
+    "汤汁稀薄"
+  ],
+  "场景标签": [
+    "friends"
+  ],
+  "场景依据": "评论 4 提到 table for four 且 Tons of food 适合多人分享",
+  "vibe": [
+    "需排队"
+  ],
+  "一致性": "中"
+}

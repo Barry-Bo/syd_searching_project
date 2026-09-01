@@ -1,0 +1,53 @@
+{
+  "适合": [
+    {
+      "人群或场合": "赶时间的人",
+      "依据": "适合快速解决一餐",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "if you need an affordable hot bowl of spicy noodles for a quick meal, this is the right place."
+    }
+  ],
+  "慎选": [
+    {
+      "提醒": "对肉量有要求的人",
+      "原因": "肉量偏少且被蔬菜覆盖",
+      "提及": 1,
+      "评论编号": [
+        1
+      ],
+      "原句": "the meat portion is still too small. Compared to the large amount of noodles in a bowl you should have put more braised beef in it. I can barely see the meat underneath the vegetables lol."
+    },
+    {
+      "提醒": "对面条口感有要求的人",
+      "原因": "面条煮得偏软烂",
+      "提及": 1,
+      "评论编号": [
+        4
+      ],
+      "原句": "the noodles are a little over cooked."
+    }
+  ],
+  "必点": [
+    {
+      "菜名": "Chongqing xiao mian",
+      "提及": 2,
+      "评论编号": [
+        2,
+        3
+      ],
+      "原句": "The recommended Chongqing xiao mian is definitely worth a try."
+    }
+  ],
+  "高频负面词": [
+    "肉量少",
+    "汤底偏淡",
+    "面条偏软"
+  ],
+  "场景标签": [],
+  "场景依据": null,
+  "vibe": [],
+  "一致性": "中"
+}
