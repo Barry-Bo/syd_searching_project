@@ -2,7 +2,7 @@
   "适合": [
     {
       "人群或场合": "带小孩的家庭",
-      "依据": "店员会主动给小朋友食物并陪伴娱乐",
+      "依据": "店员会主动给儿童提供食物并陪伴玩耍",
       "提及": 1,
       "评论编号": [
         2
@@ -21,8 +21,8 @@
   ],
   "慎选": [
     {
-      "提醒": "对咖啡品质有要求的人",
-      "原因": "出品易出错且口味不佳",
+      "提醒": "对咖啡出品稳定性有要求的人",
+      "原因": "点单时易被弄错饮品",
       "提及": 1,
       "评论编号": [
         4
@@ -30,8 +30,8 @@
       "原句": "They kinda mixup with my coffee for cappuccino when I ordered flat white."
     },
     {
-      "提醒": "想吃热食甜点的人",
-      "原因": "部分糕点内馅偏凉",
+      "提醒": "喜欢热馅点心的人",
+      "原因": "部分点心内馅偏凉",
       "提及": 1,
       "评论编号": [
         3
@@ -47,7 +47,7 @@
         1,
         5
       ],
-      "原句": "Waffle Like Jagger is a kind of dessert that absolutely scrumptious!"
+      "原句": "The highlight was definitely the waffle dessert—super crispy with a rich coffee sauce that wasn't overly sweet, paired perfectly with vanilla ice cream."
     },
     {
       "菜名": "Fritter Sweet Symphony",
@@ -64,7 +64,15 @@
       "评论编号": [
         1
       ],
-      "原句": "The XO prawn noodles were flavourful with just a mild kick"
+      "原句": "The XO prawn noodles were flavourful with just a mild kick,"
+    },
+    {
+      "菜名": "Smells Like Crab Spirit",
+      "提及": 1,
+      "评论编号": [
+        5
+      ],
+      "原句": "I love Smells Like Crab Spirit as it is so tasty."
     }
   ],
   "高频负面词": [
@@ -74,7 +82,7 @@
     "family",
     "friends"
   ],
-  "场景依据": "评论 2 提到 'my little one' 及店员照顾儿童；评论 4 明确提及 'best place for gatherings'",
+  "场景依据": "评论 2 提到 'my little one' 及店员照顾小孩；评论 4 明确提及 'best place for gatherings'",
   "vibe": [
     "安静",
     "上菜快"
