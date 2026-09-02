@@ -1,0 +1,226 @@
+<title>SydBite 卡片试读</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* 单一浅色方案：两位用户反馈深色「看着不是很有食欲」，
+   餐饮内容不跟随系统深色，所有颜色显式声明，不依赖 host 底色。 */
+:root{
+  --paper:#F5F4F0; --surface:#FFFFFF; --ink:#17191A; --muted:#5E6567;
+  --faint:#8A9092; --rule:#E2E0DA; --soft:#EEEDE8; --chip:#EBEAE4;
+  --warn:#A8321E; --warn-bg:#FBF1EE; --warn-tag:#DFC8C1;
+  --pick:#1F5D4C; --pick-bg:#F0F4F2;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);margin:0;
+  font-family:"IBM Plex Sans","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.1rem 5rem}
+:focus-visible{outline:2px solid var(--pick);outline-offset:2px;border-radius:3px}
+
+.intro{padding:3rem 0 1.4rem}
+.eyebrow{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--faint);margin:0 0 .9rem}
+.intro h1{font-family:"Newsreader","PingFang SC",serif;font-weight:600;
+  font-size:clamp(1.85rem,5.2vw,2.6rem);line-height:1.17;letter-spacing:-.01em;
+  margin:0 0 .9rem;text-wrap:balance}
+.lede{color:var(--muted);margin:0;max-width:36rem}
+
+.method{background:var(--surface);border:1px solid var(--rule);border-radius:2px;
+  padding:1.05rem 1.15rem;margin:1.5rem 0;display:grid;gap:.85rem}
+.method h2{font-family:"IBM Plex Mono",monospace;font-size:.7rem;font-weight:600;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin:0}
+.method dl{margin:0;display:grid;gap:.6rem}
+.method dt{font-weight:600;font-size:.9rem;margin-bottom:.1rem}
+.method dd{margin:0;color:var(--muted);font-size:.9rem}
+.gaps{border-top:1px solid var(--soft);padding-top:.8rem;font-size:.87rem;color:var(--muted)}
+.gaps b{color:var(--ink);font-weight:600}
+
+.ask{background:var(--surface);border:1px solid var(--ink);border-radius:2px;
+  padding:1rem 1.15rem;display:grid;gap:.45rem;margin-bottom:1.7rem}
+.ask .big{font-family:"Newsreader",serif;font-size:1.15rem;margin:0}
+.ask .sm{font-size:.87rem;color:var(--muted);margin:0}
+
+.bar{position:sticky;top:0;z-index:5;background:var(--paper);border-bottom:1px solid var(--rule);
+  padding:.65rem 0;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+.bar .count{font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:var(--muted);
+  font-variant-numeric:tabular-nums}
+.track{flex:1;min-width:4rem;height:3px;background:var(--soft);border-radius:2px;overflow:hidden}
+.fill{height:100%;width:0;background:var(--pick);transition:width .3s ease}
+.bar button{font:inherit;font-size:.78rem;padding:.32rem .66rem;border:1px solid var(--rule);
+  background:var(--surface);color:var(--muted);border-radius:2px;cursor:pointer}
+.bar button:hover{border-color:var(--ink);color:var(--ink)}
+.bar button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:2px;
+  margin-bottom:1.5rem;overflow:hidden}
+.ch{padding:1.25rem 1.25rem .9rem}
+.ch h2{font-family:"Newsreader","PingFang SC",serif;font-weight:600;font-size:1.3rem;
+  line-height:1.28;margin:0 0 .6rem;text-wrap:balance}
+.meta{display:flex;flex-wrap:wrap;gap:.34rem}
+.chip{font-size:.73rem;padding:.16rem .5rem;background:var(--chip);color:var(--muted);border-radius:2px}
+.chip.dim{background:transparent;border:1px dashed var(--rule);color:var(--faint)}
+
+/* 统一骨架：每张卡都有同样的五格，缺就写「评论未提及」，便于横向比较 */
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(6.2rem,1fr));
+  border-top:1px solid var(--soft);border-bottom:1px solid var(--soft);background:var(--paper)}
+.glance>div{padding:.62rem .7rem;border-right:1px solid var(--soft)}
+.glance>div:last-child{border-right:0}
+.glance dt{font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.08em;
+  color:var(--faint);margin:0 0 .18rem}
+.glance dd{margin:0;font-size:.87rem;font-weight:500}
+.na{color:var(--faint);font-weight:400;font-size:.83rem}
+.na.pend{border-bottom:1px dotted var(--faint)}
+
+.sec{padding:1rem 1.25rem;border-top:1px solid var(--soft)}
+.sec h3{font-family:"IBM Plex Mono",monospace;font-size:.7rem;font-weight:600;
+  letter-spacing:.15em;text-transform:uppercase;color:var(--faint);margin:0 0 .65rem}
+.sec.warn{background:var(--warn-bg);box-shadow:inset 3px 0 0 var(--warn);border-top:0}
+.sec.warn h3{color:var(--warn);letter-spacing:.18em}
+.sec.mention{background:var(--paper)}
+.sec.pick h3{color:var(--pick)}
+.hint{margin:-.15rem 0 .75rem;font-size:.83rem;color:var(--muted);line-height:1.55;
+  padding-left:.6rem;border-left:2px solid var(--rule)}
+
+.items{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
+.claim{margin:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem}
+.claim strong{font-weight:600}
+.sec.warn .claim strong{color:var(--warn)}
+.sec.pick .claim strong{color:var(--pick)}
+.rs{color:var(--muted);font-size:.92rem}
+.badge{font-size:.7rem;padding:.1rem .38rem;background:var(--pick-bg);color:var(--pick);
+  border-radius:2px;font-weight:600}
+.cite{font-family:"IBM Plex Mono",monospace;font-size:.71rem;font-weight:600;color:var(--faint);
+  border:1px solid var(--rule);border-radius:2px;padding:.04rem .3rem;
+  font-variant-numeric:tabular-nums;white-space:nowrap;cursor:help}
+.cite .sl{opacity:.45;margin:0 .04em}
+blockquote{margin:.32rem 0 0;padding-left:.7rem;border-left:1px solid var(--rule);
+  font-family:"Newsreader","PingFang SC",serif;font-style:italic;font-size:.92rem;
+  color:var(--muted);line-height:1.5}
+/* 原句默认隐藏：一位用户反馈中英夹杂难读。原句是证据不是正文，需要核对再展开。 */
+body:not(.q) blockquote{display:none}
+.none{margin:0;color:var(--faint);font-size:.89rem}
+.tags{display:flex;flex-wrap:wrap;gap:.34rem}
+.tag{font-size:.77rem;padding:.16rem .5rem;border:1px solid var(--warn-tag);
+  color:var(--warn);border-radius:2px}
+
+.vote{padding:.8rem 1.25rem;border-top:1px solid var(--soft);background:var(--paper);
+  display:flex;flex-wrap:wrap;align-items:center;gap:.55rem;justify-content:space-between}
+.vote .q{font-size:.85rem;color:var(--muted)}
+.btns{display:flex;gap:.34rem}
+.vote button{font:inherit;font-size:.81rem;padding:.3rem .74rem;cursor:pointer;
+  border:1px solid var(--rule);background:var(--surface);color:var(--muted);border-radius:2px}
+.vote button:hover{border-color:var(--ink);color:var(--ink)}
+.vote button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--surface)}
+
+.out{margin-top:2.2rem;padding-top:1.5rem;border-top:1px solid var(--rule)}
+.out h2{font-family:"Newsreader",serif;font-weight:600;font-size:1.3rem;margin:0 0 .45rem}
+.out p{color:var(--muted);font-size:.89rem;margin:0 0 .85rem}
+#gen{font:inherit;font-size:.85rem;padding:.44rem .9rem;border:1px solid var(--ink);
+  background:var(--ink);color:var(--surface);border-radius:2px;cursor:pointer;margin-bottom:.75rem}
+textarea{width:100%;min-height:10rem;font-family:"IBM Plex Mono",monospace;font-size:.77rem;
+  line-height:1.6;padding:.8rem;border:1px solid var(--rule);border-radius:2px;
+  background:var(--surface);color:var(--ink);resize:vertical}
+.note{margin-top:2.2rem;font-size:.81rem;color:var(--faint);line-height:1.7}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<div class="intro">
+  <p class="eyebrow">SydBite · 早期原型 · __N__ 家店</p>
+  <h1>不告诉你哪家店最好，<br>告诉你这家店适不适合你这顿饭</h1>
+  <p class="lede">给在悉尼的中国留学生和年轻工作者做的。小红书告诉你的是「去过的人想展示什么」，这里想补上「你需要知道什么」。</p>
+</div>
+
+<div class="method">
+  <h2>这些卡片是怎么来的</h2>
+  <dl>
+    <div><dt>每家店取 Google 地图默认排序的前 5 条公开评论，未经人工挑选</dt>
+    <dd>不是随机，也不是我挑的——就是你打开 Google 地图看到的最前面 5 条，原样取用。之所以是 5 条，因为 Google 官方 API 每家店最多返回这么多，先用同样的规则跑通。</dd></div>
+    <div><dt>卡片由大语言模型自动提炼，未经人工编辑</dt>
+    <dd>每条结论都标着「几条评论提到」，并附上可回溯的评论原句。打开顶部的「显示评论原文」，能看到每条结论的依据原文，可以回 Google 自己核对。</dd></div>
+  </dl>
+  <p class="gaps"><b>还没做到的：</b>人均价位、店内照片、是否支持外卖、儿童与宠物友好——这些是 Google 官方数据里的字段，账号还没开通，所以现在是空的。只有 23 家店，也远远覆盖不了悉尼。</p>
+</div>
+
+<div class="ask">
+  <p class="big">想请你回答一个问题：这些信息对你选店有用吗？</p>
+  <p class="sm">随便翻几张就行，不用全看完。看到熟悉的店最好——顺便帮我判断准不准。</p>
+</div>
+
+<div class="bar">
+  <span class="count" id="cnt">已评价 0 / __N__</span>
+  <span class="track"><span class="fill" id="fill"></span></span>
+  <button type="button" id="qt" aria-pressed="false">显示评论原文</button>
+  <button type="button" id="jump">跳到反馈</button>
+</div>
+
+__CARDS__
+
+<div class="out" id="out">
+  <h2>你的反馈</h2>
+  <p>点下面的按钮生成，然后全选复制发我。没点评价的卡片会被跳过。</p>
+  <button type="button" id="gen">生成反馈</button>
+  <textarea id="ta" placeholder="点上面的按钮生成"></textarea>
+  <p class="note">数据来源：Google 地图公开评论。这是一个个人练习项目，不接受商家合作，也因此可以直说缺点。</p>
+</div>
+</div>
+
+<script>
+(function(){
+  var NAMES = __NAMES__, KEY = "sydbite-gate-v2", N = __N__, votes = {};
+  try { votes = JSON.parse(localStorage.getItem(KEY) || "{}") } catch (e) { votes = {} }
+
+  function paint(){
+    var done = 0;
+    document.querySelectorAll(".vote").forEach(function(f){
+      var v = votes[f.dataset.i];
+      if (v) done++;
+      f.querySelectorAll("button").forEach(function(b){
+        b.setAttribute("aria-pressed", String(b.dataset.v === v));
+      });
+    });
+    document.getElementById("cnt").textContent = "已评价 " + done + " / " + N;
+    document.getElementById("fill").style.width = (done / N * 100) + "%";
+  }
+
+  document.querySelectorAll(".vote button").forEach(function(b){
+    b.addEventListener("click", function(){
+      var i = b.closest(".vote").dataset.i;
+      votes[i] = (votes[i] === b.dataset.v) ? null : b.dataset.v;
+      if (!votes[i]) delete votes[i];
+      try { localStorage.setItem(KEY, JSON.stringify(votes)) } catch (e) {}
+      paint();
+    });
+  });
+
+  var qt = document.getElementById("qt");
+  qt.addEventListener("click", function(){
+    var on = document.body.classList.toggle("q");
+    qt.setAttribute("aria-pressed", String(on));
+    qt.textContent = on ? "隐藏评论原文" : "显示评论原文";
+  });
+
+  document.getElementById("jump").addEventListener("click", function(){
+    document.getElementById("out").scrollIntoView({ behavior: "smooth" });
+  });
+
+  document.getElementById("gen").addEventListener("click", function(){
+    var L = { yes: "有用", partly: "一半一半", no: "没用" },
+        lines = [], tally = { yes: 0, partly: 0, no: 0 };
+    Object.keys(votes).forEach(function(i){
+      tally[votes[i]]++;
+      lines.push("・" + NAMES[i] + " —— " + L[votes[i]]);
+    });
+    var t = lines.length
+      ? "SydBite 卡片反馈\n有用 " + tally.yes + " / 一半一半 " + tally.partly +
+        " / 没用 " + tally.no + "（共评价 " + lines.length + " 张）\n\n" +
+        lines.join("\n") + "\n\n还想说的：\n"
+      : "你还没有给任何一张卡片评价。";
+    var ta = document.getElementById("ta");
+    ta.value = t; ta.focus(); ta.select();
+  });
+
+  paint();
+})();
+</script>
