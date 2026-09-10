@@ -19,12 +19,23 @@ create table if not exists restaurants (
   -- 它是 Google 条款里唯一允许长期缓存的字段。
   place_id           text unique,
   name               text not null,
+  address            text,     -- 受访者 03「列出地址、价位、营业时间」
   suburb             text,
   lat                double precision,
   lng                double precision,
   rating             numeric(2,1),
   user_ratings_total integer,
   price_level        smallint check (price_level between 0 and 4),
+  -- 人均价位（澳元/人）。Places API 因支付受阻放弃后，改为手动从 Google 地图
+  -- 店铺页抄录。price_level 是 Google 的 0-4 级枚举，装不下「A$20–40」这种写法。
+  -- 「A$100+」这类开口区间：price_min=100，price_max 留空。
+  price_min          smallint,
+  price_max          smallint,
+  -- 人均价位，单位澳元/人。Places API 放弃后改为手动从 Google 地图店铺页抄录，
+  -- 那里显示的是「A$20–40」这种区间，price_level 的 0-4 级装不下。
+  -- 「A$100+」这类开放区间：price_min=100，price_max 留空。
+  price_min          smallint,
+  price_max          smallint,
   cuisine            text,
   -- 以下同样来自 Places API，接通前全为 null。
   -- 用户反馈明确要求：朋友 F「外卖支持与否，儿童宠物友好与否，人均价格」、
@@ -39,6 +50,27 @@ create table if not exists restaurants (
   updated_at         timestamptz not null default now()
 );
 create index if not exists idx_restaurants_suburb on restaurants (suburb);
+
+-- 补列：create table if not exists 对已经存在的表不生效，所以加过的列要单独 alter，
+-- 否则先建库的人永远拿不到后加的字段。这两条都是幂等的，重复执行无害。
+alter table restaurants add column if not exists address text;
+alter table restaurants add column if not exists price_min smallint;
+alter table restaurants add column if not exists price_max smallint;
+-- 上限不得小于下限、不得为负。手抄时把「40–20」写反，写入即被拒，
+-- 而不是悄悄存下一个错的价格。约束先删后加，保证可重复执行。
+alter table restaurants drop constraint if exists restaurants_price_range;
+alter table restaurants add constraint restaurants_price_range check (
+  (price_min is null or price_min >= 0)
+  and (price_max is null or price_min is null or price_max >= price_min)
+);
+alter table restaurants add column if not exists price_min smallint;
+alter table restaurants add column if not exists price_max smallint;
+-- Postgres 的 add constraint 不支持 if not exists，先删后加保证可重复执行
+alter table restaurants drop constraint if exists restaurants_price_range;
+alter table restaurants add constraint restaurants_price_range check (
+  (price_min is null or price_min >= 0)
+  and (price_max is null or price_min is null or price_max >= price_min)
+);
 
 -- ---------------------------------------------------------- 每次跑批的记录
 -- 计划第 2 周要求「记录每次运行的 API 调用数和花费」。
@@ -174,3 +206,23 @@ drop policy if exists p_write_feedback on feedback;
 create policy p_write_feedback on feedback for insert to anon with check (true);
 
 -- extraction_runs 不对匿名开放任何权限：成本数据只有你自己该看到。
+
+-- =========================================================== 表级授权
+-- GRANT 和 RLS 是两层，缺一不可：GRANT 决定「能不能碰这张表」，
+-- RLS 决定「能碰哪些行」。上面那套 policy 只写了第二层，
+-- 而新建的 Supabase 项目不再自动给这些角色授权，所以第一层必须显式写出来。
+-- （症状：service_role 写入时报 42501 permission denied，而不是被 RLS 挡住。）
+
+grant usage on schema public to anon, service_role;
+
+-- 离线管线：全部读写。service_role 同时绕过 RLS，所以它不受上面 policy 限制。
+grant select, insert, update, delete on
+  restaurants, extraction_runs, extractions, claims, dishes, search_logs, feedback
+  to service_role;
+
+-- 前端匿名用户：展示数据只读，行为数据只写不读。
+-- 授权范围必须和上面的 policy 一致，否则等于开了后门。
+grant select on restaurants, extractions, claims, dishes to anon;
+grant insert on search_logs, feedback to anon;
+
+-- extraction_runs 不给 anon 任何授权：成本数据只有你自己该看到。
