@@ -29,6 +29,7 @@
    终端，没有落盘，所以本次运行的数字取自 docs/data-quality.md 的质检记录，
    并在 notes 里注明是回填。下次跑批前应让 run_all.py 直接写这张表。
 """
+import datetime
 import glob
 import json
 import os
@@ -79,13 +80,20 @@ def api(env, method, path, body=None, prefer=None):
         sys.exit(f"\n✗ {method} {path} → 连不上：{e.reason}")
 
 
+def now_iso():
+    """当前 UTC 时间。不用字符串 "now()"：PostgREST 会把它当普通字符串传给
+    timestamptz 列，能不能被 Postgres 解析取决于版本，不如在这里直接给出确定值。"""
+    return datetime.datetime.now(datetime.timezone.utc).isoformat()
+
+
 def eq(value):
     """把一个值拼成 PostgREST 的 eq. 过滤条件。
 
-    店名里有 | ( ) ' ! 和韩文，必须先用双引号包起来再整体百分号编码，
-    否则 PostgREST 会把 , 和 ( 当成语法。
+    只做百分号编码，不加双引号。实测 PostgREST 对 eq 会把双引号当成值的一部分，
+    加了就一行都匹配不上——这个 bug 曾让重跑入库把 23 家店全部重复插入一遍。
+    店名里的 | ( ) ' ! 和韩文，百分号编码后都能正确匹配（已逐一实测）。
     """
-    return "eq." + urllib.parse.quote(f'"{value}"', safe="")
+    return "eq." + urllib.parse.quote(str(value), safe="")
 
 
 # ------------------------------------------------------------- 数据转换
@@ -166,9 +174,13 @@ def collect(version, model):
             missing.append(stem)
             continue
         sample = json.load(open(path, encoding="utf-8"))
+        # places 块来自 fetch.py（Places API，已搁置），manual 块来自手填的人均和区。
+        # 两者都有时手填的覆盖同名字段。都没有的店为 None。
+        extra = dict(sample.get("places") or {})
+        extra.update(sample.get("manual") or {})
         pairs.append((sample["name"], len(sample["reviews"]),
                       json.load(open(out, encoding="utf-8")),
-                      sample.get("places")))   # fetch.py 拉过才有，手动通道的店为 None
+                      extra or None))
     return pairs, missing
 
 
@@ -182,7 +194,8 @@ def restaurant_cols(name, places):
     if not places:
         return cols
     allowed = ("place_id", "address", "suburb", "lat", "lng", "rating",
-               "user_ratings_total", "price_level", "cuisine", "takeout", "delivery",
+               "user_ratings_total", "price_level", "price_min", "price_max",
+               "cuisine", "takeout", "delivery",
                "good_for_children", "allows_dogs", "opening_hours", "photo_refs")
     cols.update({k: v for k, v in places.items() if k in allowed and v is not None})
     return cols
@@ -208,7 +221,7 @@ def get_or_create_restaurant(env, name, places=None):
         rid = found[0]["id"]
         if len(cols) > 1:   # 除 name 外还有东西可写才发这次请求
             api(env, "PATCH", f"/restaurants?id=eq.{rid}",
-                dict(cols, updated_at="now()"), prefer="return=minimal")
+                dict(cols, updated_at=now_iso()), prefer="return=minimal")
         return rid, False
 
     row = api(env, "POST", "/restaurants", [cols], prefer="return=representation")
@@ -245,27 +258,40 @@ def main():
     print(f"prompt {version} · {model} · {len(pairs)} 家店"
           + ("　（dry-run，不写库）" if dry else "") + "\n")
 
-    n_places = sum(1 for *_, p in pairs if p)
-    print(f"其中 {n_places}/{len(pairs)} 家有 Places API 字段"
-          + ("　（其余走的是手动通道，接通后跑 fetch.py --refresh 补齐）"
-             if n_places < len(pairs) else "") + "\n")
+    n_price = sum(1 for *_, p in pairs if p and p.get("price_min") is not None)
+    n_sub = sum(1 for *_, p in pairs if p and p.get("suburb"))
+    print(f"已填人均 {n_price}/{len(pairs)} 家，已填区 {n_sub}/{len(pairs)} 家"
+          + ("　（没填的用 set_meta.py 补）" if min(n_price, n_sub) < len(pairs) else "")
+          + "\n")
 
     if dry:
         for name, rc, card, places in pairs:
             cl, di = claims_of(card), dishes_of(card)
             fit = sum(1 for c in cl if c["kind"] == "fit")
             extra = ""
-            if places:
-                extra = f"　价位{places.get('price_level')}　图{len(places.get('photo_refs') or [])}"
+            if places and places.get("price_min") is not None:
+                hi = places.get("price_max")
+                extra += f"　人均{places['price_min']}{'+' if hi is None else '-' + str(hi)}"
+            if places and places.get("suburb"):
+                extra += f"　{places['suburb']}"
             print(f"  {name[:34]:<36}评论{rc}　适合{fit}　慎选{len(cl)-fit}　必点{len(di)}"
                   f"　场景{','.join(card.get('场景标签') or []) or '—'}{extra}")
         print(f"\n本地校验全部通过。去掉 --dry-run 即可真正写入。")
         return
 
-    run = api(env, "POST", "/extraction_runs",
-              [dict(RUN_META, prompt_version=version, model=model)],
-              prefer="return=representation")[0]
-    print(f"跑批记录 id：{run['id']}\n")
+    # 同一版本、同一模型的提炼只发生过一次，入库却可以重跑很多次。
+    # 所以先找已有的跑批记录复用，找不到才新建。否则每重跑一次入库就多一条
+    # 内容相同的记录，按 cost_cny 求和会把花费重复计算。
+    found_run = api(env, "GET", f"/extraction_runs?prompt_version={eq(version)}"
+                    f"&model={eq(model)}&order=started_at.asc&limit=1&select=id")
+    new_run = not found_run
+    if new_run:
+        run = api(env, "POST", "/extraction_runs",
+                  [dict(RUN_META, prompt_version=version, model=model)],
+                  prefer="return=representation")[0]
+    else:
+        run = found_run[0]
+    print(f"跑批记录 id：{run['id']}（{'新建' if new_run else '复用已有记录'}）\n")
 
     n_new = n_claims = n_dishes = 0
     for name, review_count, card, places in pairs:
@@ -298,8 +324,9 @@ def main():
         print(f"  ✓ {name[:34]:<36}{'新建' if created else '更新'}"
               f"　结论{len(cl)}　菜品{len(di)}")
 
-    api(env, "PATCH", f"/extraction_runs?id=eq.{run['id']}",
-        {"finished_at": "now()"}, prefer="return=minimal")
+    if new_run:
+        api(env, "PATCH", f"/extraction_runs?id=eq.{run['id']}",
+            {"finished_at": now_iso()}, prefer="return=minimal")
 
     print(f"\n完成：{len(pairs)} 家店（新建 {n_new}，更新 {len(pairs)-n_new}）"
           f"，{n_claims} 条结论，{n_dishes} 道菜品。")

@@ -1,0 +1,101 @@
+# 给现有的店补「人均」和「区」。在 Google 地图上打开每家店的页面：
+#   人均 —— 店名下方形如「A$20–40」的那个，照抄数字写成 20-40；
+#          显示「$$」的不是金额，是价位档次，留空
+#   区   —— 地址里的 suburb，比如 Haymarket、Sydney、Chatswood
+# 查不到就留空，不会清空已有的值。店名那一行别改。
+#
+# 填完先预览，再真正写入：
+#   python3 pipeline/set_meta.py --dry-run pipeline/samples/_meta.txt
+#   python3 pipeline/set_meta.py pipeline/samples/_meta.txt
+
+=== Beijing Impression Haymarket ===
+人均：$40-60
+区：Haymarket
+
+=== Chuan Xiang Flavor 川湘百味 ===
+人均：$20-40
+区：Zetland
+
+=== Dookki Sydney - 두끼 떡볶이 - Korean Tteokbokki Hotpot Buffet (All You Can Eat!) ===
+人均：$20-40
+区：Liverpool St
+
+=== Fireside ===
+人均：$20-40
+区：488 kent St
+
+=== Fortune Alley Westfield Sydney | 小巷 ===
+人均：$12-20
+区：Westfield
+
+=== Fourth Fish Rozelle ===
+人均：$20-40
+区：Darling St
+
+=== Guzman y Gomez - Chatswood ===
+人均：$1-20
+区：Chatswood
+
+=== Hansang Korean Family Restaurant ===
+人均：$20-40
+区：Heymarket
+
+=== Henry Lee's ===
+人均：$20-40
+区：Redfern
+
+=== Kobe Wagyu Yakiniku ===
+人均：$100-120
+区：George St
+
+=== Mr.Xiaomian noodle bar ===
+人均：$1-20
+区：Kingsford
+
+=== Taste of Changbai Northeastern Cuisine ===
+人均：$20-40
+区：Haymarket
+
+=== The Best Taste of Asia ===
+人均：$20-40
+区：Kingsford
+
+=== Ting Hao A ===
+人均：$20-40
+区：Chatswood
+
+=== Yummy Pepper House ===
+人均：$20-40
+区：Kingsford
+
+=== Zhou Mum Cafe ===
+人均：$1-20
+区：Kingsford
+
+=== 喜院湘菜馆 Diner's Garden ===
+人均：$20-40
+区：Zetland
+
+=== 杨国福麻辣烫 Yang Guo Fu Ma La Tang ===
+人均：$20-40
+区：Kingsford
+
+=== 湘聚 Taste Of Home ===
+人均：$20-40
+区：Kingsford
+
+=== 牛一碗 Lanzhou Beef Noodles ===
+人均：$1-20
+区：Kingsford
+
+=== 疆域美食 儿子娃娃新疆炒米粉 ===
+人均：$20-40
+区：Kingsford
+
+=== 百巷蹄花BAI XIANG ===
+人均：$1-20
+区：Kingsford
+
+=== 老班长·湘里 Taste of Hunan Haymarket ===
+人均：$20-40
+区：Haymarket
