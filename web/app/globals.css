@@ -1,0 +1,146 @@
+/* 单一浅色方案：Gate 反馈里两位用户说深色「看着不是很有食欲」，
+   餐饮内容不跟随系统深色，所有颜色显式声明。 */
+:root {
+  --paper: #f5f4f0;
+  --surface: #ffffff;
+  --ink: #17191a;
+  --muted: #5e6567;
+  --faint: #8a9092;
+  --rule: #e2e0da;
+  --soft: #eeede8;
+  --chip: #ebeae4;
+  --warn: #a8321e;
+  --warn-bg: #fbf1ee;
+  --warn-tag: #dfc8c1;
+  --pick: #1f5d4c;
+  --pick-bg: #f0f4f2;
+  --sans: var(--font-plex-sans), "PingFang SC", "Hiragino Sans GB", sans-serif;
+  --serif: var(--font-newsreader), "PingFang SC", serif;
+  --mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 2px solid var(--pick); outline-offset: 2px; border-radius: 3px; }
+
+.wrap { max-width: 44rem; margin: 0 auto; padding: 0 1.1rem 4rem; }
+
+/* ---------- 头部与筛选 ---------- */
+.top { padding: 1.6rem 0 1rem; }
+.brand { font-family: var(--serif); font-weight: 600; font-size: 1.5rem; letter-spacing: -0.01em; }
+.tagline { color: var(--muted); font-size: 0.88rem; margin-top: 0.25rem; }
+
+.search { display: flex; gap: 0.5rem; margin: 1rem 0 0.8rem; }
+.search input {
+  flex: 1; font: inherit; font-size: 0.95rem; padding: 0.6rem 0.8rem;
+  border: 1px solid var(--rule); border-radius: 2px; background: var(--surface); color: var(--ink);
+}
+.search button {
+  font: inherit; font-size: 0.9rem; padding: 0.6rem 1.1rem; cursor: pointer;
+  border: 1px solid var(--ink); background: var(--ink); color: var(--surface); border-radius: 2px;
+}
+
+.chips { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 0.55rem; }
+.chips .label {
+  font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.12em;
+  color: var(--faint); align-self: center; margin-right: 0.15rem; text-transform: uppercase;
+}
+.chip {
+  font-size: 0.8rem; padding: 0.26rem 0.62rem; border: 1px solid var(--rule);
+  background: var(--surface); color: var(--muted); border-radius: 2px; white-space: nowrap;
+}
+.chip:hover { border-color: var(--ink); color: var(--ink); }
+.chip.on { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+
+.count { font-family: var(--mono); font-size: 0.75rem; color: var(--faint);
+  padding: 0.7rem 0; border-top: 1px solid var(--rule); margin-top: 0.4rem; }
+
+/* ---------- 列表卡片 ---------- */
+.list { display: grid; gap: 0.9rem; }
+.item {
+  display: block; background: var(--surface); border: 1px solid var(--rule);
+  border-radius: 2px; padding: 0.95rem 1.05rem;
+}
+.item:hover { border-color: var(--ink); }
+.item h2 { font-family: var(--serif); font-weight: 600; font-size: 1.16rem; line-height: 1.3; }
+.meta { font-size: 0.83rem; color: var(--muted); margin-top: 0.2rem; }
+.meta .sep { color: var(--faint); margin: 0 0.35rem; }
+
+/* 慎选：整页唯一的高饱和色块，占的正是大众点评放「榜单第 1 名」的位置 */
+.warn-row {
+  margin-top: 0.6rem; padding: 0.5rem 0.6rem; background: var(--warn-bg);
+  border-left: 3px solid var(--warn); border-radius: 0 2px 2px 0; font-size: 0.87rem;
+}
+.warn-row b { color: var(--warn); font-weight: 600; }
+.warn-row .why { color: var(--muted); }
+.warn-none { margin-top: 0.6rem; font-size: 0.83rem; color: var(--faint); }
+.pick-row { margin-top: 0.5rem; font-size: 0.87rem; }
+.pick-row .k { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.12em;
+  color: var(--pick); text-transform: uppercase; margin-right: 0.4rem; }
+
+.cite {
+  font-family: var(--mono); font-size: 0.7rem; font-weight: 600; color: var(--faint);
+  border: 1px solid var(--rule); border-radius: 2px; padding: 0.02rem 0.28rem;
+  font-variant-numeric: tabular-nums; white-space: nowrap; margin-left: 0.3rem;
+}
+
+/* ---------- 详情页 ---------- */
+.back { font-size: 0.83rem; color: var(--muted); display: inline-block; margin: 1.4rem 0 0.9rem; }
+.detail { background: var(--surface); border: 1px solid var(--rule); border-radius: 2px; overflow: hidden; }
+.dh { padding: 1.25rem 1.25rem 0.9rem; }
+.dh h1 { font-family: var(--serif); font-weight: 600; font-size: 1.5rem; line-height: 1.25; }
+.tags { display: flex; flex-wrap: wrap; gap: 0.34rem; margin-top: 0.6rem; }
+.tag { font-size: 0.73rem; padding: 0.16rem 0.5rem; background: var(--chip); color: var(--muted); border-radius: 2px; }
+.tag.dim { background: transparent; border: 1px dashed var(--rule); color: var(--faint); }
+
+.glance { display: grid; grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  border-top: 1px solid var(--soft); border-bottom: 1px solid var(--soft); background: var(--paper); }
+.glance > div { padding: 0.6rem 0.7rem; border-right: 1px solid var(--soft); }
+.glance > div:last-child { border-right: 0; }
+.glance dt { font-family: var(--mono); font-size: 0.6rem; letter-spacing: 0.08em; color: var(--faint); }
+.glance dd { font-size: 0.86rem; font-weight: 500; margin-top: 0.15rem; }
+.na { color: var(--faint); font-weight: 400; font-size: 0.82rem; }
+
+.sec { padding: 1rem 1.25rem; border-top: 1px solid var(--soft); }
+.sec h3 { font-family: var(--mono); font-size: 0.68rem; font-weight: 600; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--faint); margin-bottom: 0.65rem; }
+.sec.warn { background: var(--warn-bg); box-shadow: inset 3px 0 0 var(--warn); border-top: 0; }
+.sec.warn h3 { color: var(--warn); }
+.sec.mention { background: var(--paper); }
+.sec.pick h3 { color: var(--pick); }
+.hint { margin: -0.1rem 0 0.7rem; font-size: 0.82rem; color: var(--muted);
+  padding-left: 0.6rem; border-left: 2px solid var(--rule); line-height: 1.55; }
+
+.items { list-style: none; display: grid; gap: 0.8rem; }
+.claim { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem; }
+.claim strong { font-weight: 600; }
+.sec.warn .claim strong { color: var(--warn); }
+.sec.pick .claim strong { color: var(--pick); }
+.why { color: var(--muted); font-size: 0.91rem; }
+blockquote {
+  margin-top: 0.3rem; padding-left: 0.7rem; border-left: 1px solid var(--rule);
+  font-family: var(--serif); font-style: italic; font-size: 0.9rem; color: var(--muted); line-height: 1.5;
+}
+.none { color: var(--faint); font-size: 0.88rem; }
+.negs { display: flex; flex-wrap: wrap; gap: 0.34rem; }
+.neg { font-size: 0.77rem; padding: 0.16rem 0.5rem; border: 1px solid var(--warn-tag);
+  color: var(--warn); border-radius: 2px; }
+
+.maps {
+  display: block; text-align: center; margin: 1rem 1.25rem 1.25rem; padding: 0.65rem;
+  border: 1px solid var(--ink); border-radius: 2px; font-size: 0.9rem;
+}
+.maps:hover { background: var(--ink); color: var(--surface); }
+
+.foot { margin-top: 2rem; font-size: 0.78rem; color: var(--faint); line-height: 1.7;
+  border-top: 1px solid var(--rule); padding-top: 1rem; }
