@@ -6,5 +6,10 @@
     "After looking forward to visiting for a long time\nHad a nice lunch set combination\nbut surprised by way too tiny portions\nTastes of food was nothing worth for 2 hours of driving and parking near by\nAlso took us nearly 1 hour just getting out of carpark was the worst parking experience in my life.\nCute quokka logo, though",
     "the food was very delicious and great value. The staff were really friendly and the service was quick! Would recommend going again!",
     "A Chinese restaurant inspired by Korean techniques and flavours, situated in the centre of Chatswood, Ting Hao A gives twist to the standard Chinese dishes. I recommend the fried chicken, very tender, crispy and has nice Yuzu sauce. The sweet and sour pork was a bit disappointing, as the meat was too lean and batter didn't work well with the sauce. Staff were always smiling and food came quickly. A good spot for a casual catch up. Worth a try!"
-  ]
+  ],
+  "manual": {
+    "price_min": 20,
+    "price_max": 40,
+    "suburb": "Chatswood"
+  }
 }

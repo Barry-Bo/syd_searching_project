@@ -6,5 +6,10 @@
     "I never think ill like it, I'm loving it. Many options and quick decision. 🥰🥰",
     "Went here for lunch and was really impressed with the variety of dishes and the portion sizes. I got two choices with white rice — sweet and sour pork, and eggplant with potato — and everything was hot, fresh, and super tasty. Great value for money and very filling. Definitely coming back for lunch again!",
     "I got the cumin lamb, beef in tomato stew, and roasted vegetables.\n\nMy favorite was the beef -- incredible flavor. The lamb was good BUT it's spiced to high heaven. You will need all the rice you can get to balance the taste. Veggies are lame, I would skip this unless you really want to avoid getting 3 meats in the large set."
-  ]
+  ],
+  "manual": {
+    "price_min": 12,
+    "price_max": 20,
+    "suburb": "Sydney"
+  }
 }

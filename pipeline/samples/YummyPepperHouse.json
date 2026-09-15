@@ -6,5 +6,10 @@
     "环境很好，菜品味道也不错，服务员态度友好。",
     "Awesome taste. I've been coming here for the past six months. Love the food.",
     "The food was absolutely delicious and full of flavor. The service was friendly, attentive, and made us feel very welcome."
-  ]
+  ],
+  "manual": {
+    "price_min": 20,
+    "price_max": 40,
+    "suburb": "Kingsford"
+  }
 }

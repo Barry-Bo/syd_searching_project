@@ -6,5 +6,10 @@
     "Came back to the restaurant on April 30th with the same group of friends. I’ve noticed a big improvement in the hygiene, definitely better than I expected. This time, no stomach issues at all. I’ll leave my previous review up as a reflection of my past experience and to show how things are changing for the better. -April 2025\n\nToday is the 4th day of me having to deal with diarrhoea, nausea and headache. - March 2025",
     "A good range of ingredients and the broth is nice. I got the spicy broth, it was nice. It wasn’t as spicy as I had expected but adding a bit of chilli sauce made it just right. The tables were a bit sticky and could be wiped down a bit better.",
     "Nice place to visit with reasonable price. I had a Mala soup and did not try the fried Mala. The kitchen has made mistakes of my friend’s order. Here they provide lots of space."
-  ]
+  ],
+  "manual": {
+    "price_min": 20,
+    "price_max": 40,
+    "suburb": "Kingsford"
+  }
 }

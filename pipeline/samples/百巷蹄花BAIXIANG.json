@@ -6,5 +6,10 @@
     "好吃干净卫生",
     "非常好吃 店家有礼貌客气 餐品分量很大很好吃",
     "Nice food 👍🏼\nThe pork trotter is very tasty and soft, beef brisket good too 🩷\nThe side dish spicy radish is yummy also"
-  ]
+  ],
+  "manual": {
+    "price_min": 1,
+    "price_max": 20,
+    "suburb": "Kingsford"
+  }
 }

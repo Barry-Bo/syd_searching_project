@@ -6,5 +6,10 @@
     "Honestly, better quality than most BBQ buffets in Sydney. The highlight is definitely the Wagyu—the marbling was great and it actually tasted fresh, not like the frozen stuff you get elsewhere. We ordered a few rounds of the premium cuts, and the texture was tender without being overly greasy.\nThe seafood was also surprisingly good; the prawns and scallops were fresh and grilled well. Didn't expect much from the sushi since it's a BBQ place, but the sashimi was decent too.\nService was quick with bringing out the meat orders, which is rare for a buffet. Good drinks menu as well. If you're coming for the meat quality, it's worth the price.",
     "Love this Kobe restaurant! The notice asking customers to respect staff really warms my heart. Staff are friendly and attentive, food tastes fantastic. It's lovely to see a business that values its employees, will definitely come back soon!",
     "⭐⭐⭐⭐⭐\n\nHad an amazing birthday dinner at Kobe Wagyu Yakiniku! The quality of the wagyu was excellent, tender and full of flavour. Service was friendly and attentive, and the atmosphere was great for a special occasion.\n\nThe highlight was the birthday promotion where the birthday guest receives 50% off, which made the experience even better value. If you're a wagyu lover, it's definitely worth visiting on your birthday.\n\nHighly recommend for anyone looking for quality Japanese BBQ and a great birthday treat!"
-  ]
+  ],
+  "manual": {
+    "price_min": 100,
+    "price_max": 120,
+    "suburb": "Sydney"
+  }
 }

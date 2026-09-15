@@ -6,5 +6,10 @@
     "Great food, friendly service, and a welcoming atmosphere. The dishes were fresh, flavorful, and well prepared. Overall, it was a very enjoyable dining experience. I would definitely come back and recommend this restaurant to anyone looking for delicious Hunan cuisine.",
     "My favourite Chinese restaurant， the ingredients are very fresh and the flavors are rich and authentic. If you love spicy food, this place is definitely worth trying — the dishes have a great balance of heat and fragrance. The outdoor seating area is also very pleasant, making it a great spot to enjoy a meal. Highly recommended.",
     "2. 口味完全超出预期，上菜速度快，环境安静舒服，价格实惠，不管一人简餐还是朋友小聚都合适，五星推荐！"
-  ]
+  ],
+  "manual": {
+    "price_min": 20,
+    "price_max": 40,
+    "suburb": "Zetland"
+  }
 }

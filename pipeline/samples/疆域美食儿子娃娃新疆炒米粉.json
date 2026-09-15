@@ -6,5 +6,10 @@
     "Their signature spicy rice noodles with naan combo is absolutely amazing, paired with tender cumin lamb ribs and classic dapanji for a satisfying feast after class.",
     "好地道的新疆味道！量真的大，价格也实惠！面随便免费加吃到饱！",
     "When it comes to Chinese food, JIANGYU at 343 Anzac Parade Kingsford is a hidden gem. Ignore the poor reviews and trust in the culinary delights.\n7pm on a Tuesday night, the place was packed (a good sign)\n\nFrom exotic offal to classic dishes, the menu offers something for every palate.\n\nWe played it safe....\n\nWe ordered:\nLamb chops with chilli sauce.   A better description, Lamb off cuts (not chops) 20% very fatty/ 80% full of meat. Regardless, the dish was very tasty and enough for 3 people\n\nSpicy Chicken “hot pot” with chilli. Lots of raw garlic cloves “YUM” flavours are still rolling in my mouth the next day. Very nice.\n\nThe Cauliflower dish and smashed cucumber complemented the other dishes.\n\nThe ambience and hygiene might not score top marks, but the food is a stellar 4 out of 5 stars\n\n$75.00 for 3 people (4 generous dishes + rice)"
-  ]
+  ],
+  "manual": {
+    "price_min": 20,
+    "price_max": 40,
+    "suburb": "Kingsford"
+  }
 }

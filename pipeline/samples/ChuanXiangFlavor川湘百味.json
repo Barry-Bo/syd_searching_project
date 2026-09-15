@@ -6,5 +6,10 @@
     "Services good really clean",
     "A new restaurant in our building, and so far, whatever we tried has been finger-licking great! 🥢❤️",
     "Best"
-  ]
+  ],
+  "manual": {
+    "price_min": 20,
+    "price_max": 40,
+    "suburb": "Zetland"
+  }
 }

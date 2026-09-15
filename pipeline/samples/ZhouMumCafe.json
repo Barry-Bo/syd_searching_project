@@ -6,5 +6,10 @@
     "Owner is really kind, the service is amazing and the food is out of this world.",
     "Chinese food count style restaurant. Cheap, Good range of choice and taste alright. Big potion, and free for rice refill.",
     "Well, if you're about to be out of money and want to have an ultra-large portion, this is the best place that I can offer around UNSW!\n\nFor $14, you'll get MOUNTAINEOUS rice with 3 dishes, which also comes with a free drink!\n\nMONEY SPENT WELL HERE!"
-  ]
+  ],
+  "manual": {
+    "price_min": 1,
+    "price_max": 20,
+    "suburb": "Kingsford"
+  }
 }

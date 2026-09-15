@@ -6,5 +6,10 @@
     "Got the ox tail and spicy soup with tripe. There could have been alot more meat especially with the pricing of the dishes. I also wish the flavour was just abit stronger.",
     "misleading menu - Ruined our meal\nWe visited Hansang Korean Family Restaurant during our trip to Sydney and had a very upsetting experience. We ordered the Traditional Pork Soup hotpot (as seen in my attached image.png), expecting standard pork cuts. No one informed us, nor was it clearly highlighted, that this pot is packed with pig internal organs and parts of the face, including tongue and ears.\nWhen we politely raised this issue, the receptionist dismissively told us that the dish is \"common.\" As tourists who are not Korean, we had no way of knowing this without proper communication from the staff or a clear menu description. The lack of empathy and poor customer service completely ruined our evening. Tourists, beware if you do not eat offal. This might be common for Korean but as international visitors, we shouldn't have to guess what's hidden in our food. A simple warning from the waiter would have prevented this.",
     "There's no atmosphere to speak of, but you're here for the food, let's be real. It's always good and so hearty. From soondae, pork to kimchi pancake, fried chicken, to all its glorious soups, and opportunities to indulge in soju."
-  ]
+  ],
+  "manual": {
+    "price_min": 20,
+    "price_max": 40,
+    "suburb": "Haymarket"
+  }
 }

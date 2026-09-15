@@ -6,5 +6,10 @@
     "As a first timer at this restaurant, we were not disappointed. The service was friendly, quick & efficient with a good selection of generous dishes, relaxed & busy. My friend & I ordered the Mixed Dimsum, Chicken with Fried Rice & Eggplant. The Eggplant was the best & absolutely delish that I have had so far, either locally or overseas; the Chicken & Friend Rice was tasteful & plentiful. We were not impressed with the Mixed Dimsum, as the wrapper was a bit thick, chewy, bland & undercooked. I would have given a 5*, except for this, but this will not stop me from coming back to try the other dishes.",
     "Tried this restaurant, Sydney was still a bit cold so we need to eat hearty meal. The menu we ordered did not dissapoint, we also got big portion of rice.",
     "Went here for a quick lunch date. Their dish portion was really generous! Unfortunately, the dishes we've ordered is only so-so. The duck was juicy & yummy, but the noodle lack flavour. The pork belly udon soup also a bit lack in flavour and the udon vs meat ratio is not good (too much noodle). To make it worse, there is a guy sit next to us that chew and slurp so loud! We might come back again to try their other dishes & hope that other guy wasnt there 😅"
-  ]
+  ],
+  "manual": {
+    "price_min": 20,
+    "price_max": 40,
+    "suburb": "Kingsford"
+  }
 }

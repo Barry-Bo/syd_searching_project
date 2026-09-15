@@ -6,5 +6,10 @@
     "Amazing lunch deal! The food was delicious, the portions were really generous, and the price was excellent. One of the best value lunches I’ve had. Highly recommend!",
     "Came back for a lot of times already.",
     "taste really good"
-  ]
+  ],
+  "manual": {
+    "price_min": 20,
+    "price_max": 40,
+    "suburb": "Sydney"
+  }
 }
