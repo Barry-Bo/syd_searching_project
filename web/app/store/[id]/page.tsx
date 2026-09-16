@@ -83,7 +83,11 @@ export default async function Page({
               {strong.map((w, i) => <Item key={i} c={w} total={total} />)}
             </ul>
           ) : (
-            <p className="none">这 {total} 条评论里，没有两人以上共同提到的问题。</p>
+            <p className="none">
+              这 {total} 条评论里，没有两人以上共同提到的问题。
+              <br />
+              但只有 {total} 条评论——没人提到，不等于这家店没有问题。
+            </p>
           )}
         </section>
 

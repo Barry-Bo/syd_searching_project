@@ -51,7 +51,9 @@ function Card({ r }: { r: Restaurant }) {
           有 {ws.length} 条只有 1 个人提到的情况，点进来看
         </p>
       ) : (
-        <p className="warn-none">这几条评论里没有人提到问题</p>
+        <p className="warn-none">
+          这几条评论里没人提到问题（只看了 {c?.review_count ?? "几"} 条）
+        </p>
       )}
 
       {top.length > 0 && (
