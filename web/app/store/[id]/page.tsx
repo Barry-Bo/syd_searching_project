@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -22,14 +23,10 @@ function Item({ c, total }: { c: Claim; total: number }) {
   );
 }
 
-// 用显式的 Promise 类型而不是 PageProps<"/store/[id]">：
-// 后者依赖 next dev/build 生成的路由类型，新建路由后没重新生成就会报错。
-// 官方文档给的就是这种写法，不依赖生成物。
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
+// params 同样是运行时数据，和列表页一样交给 Suspense 里的异步子组件。
+// 类型用显式 Promise 而不是 PageProps<"/store/[id]">：后者依赖 next build
+// 生成的路由类型，新建路由后没重新生成就会报错。
+async function Detail({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const r = await getRestaurant(id);
   if (!r) notFound();
@@ -53,9 +50,7 @@ export default async function Page({
   ];
 
   return (
-    <main className="wrap">
-      <Link href="/" className="back">← 返回列表</Link>
-
+    <>
       <article className="detail">
         <header className="dh">
           <h1>{r.name}</h1>
@@ -156,6 +151,17 @@ export default async function Page({
         数据来源：Google 地图公开评论，每家取默认排序的前 {total} 条，未经人工挑选。
         卡片由大语言模型自动提炼，未经人工编辑。
       </p>
+    </>
+  );
+}
+
+export default function Page(props: { params: Promise<{ id: string }> }) {
+  return (
+    <main className="wrap">
+      <Link href="/" className="back">← 返回列表</Link>
+      <Suspense fallback={<p className="none">正在载入…</p>}>
+        <Detail params={props.params} />
+      </Suspense>
     </main>
   );
 }

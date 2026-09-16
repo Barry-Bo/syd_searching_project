@@ -1,3 +1,4 @@
+import { cacheLife } from "next/cache";
 import { supabase } from "./supabase";
 import type { Restaurant, Claim, Dish } from "./types";
 
@@ -5,6 +6,12 @@ import type { Restaurant, Claim, Dish } from "./types";
 // 现在只有 23 家（计划 30 家），一次查询几十 KB，比让 PostgREST 对嵌套表
 // 做过滤简单得多，也避免 N+1。店数上到几百家时再改成数据库端过滤。
 export async function getRestaurants(): Promise<Restaurant[]> {
+  // 缓存整份店铺数据。提炼是离线预计算的，线上只读——这正是 README 决策 1
+  // 说的那个架构，缓存让它名副其实：请求不再每次跨太平洋回源查库。
+  // 数据变更来自重新跑 load_db.py，之后重新部署即可刷新。
+  "use cache";
+  cacheLife("days");
+
   const { data, error } = await supabase
     .from("restaurants")
     .select(
