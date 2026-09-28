@@ -32,9 +32,14 @@ export function PostHogInit() {
     // 而 ?? 只在 null/undefined 时兜底，空字符串会原样通过，
     // 再被下面的 if (!key) 拦掉——这正是前两次部署埋点没启动的原因。
     const key = envKey && envKey.startsWith("phc_") ? envKey : "phc_qFQy4TTHKWRTkM7Vf3EFNUSaDzo4mBzew6NvsjKfvefn";
+    const envHost = process.env.NEXT_PUBLIC_POSTHOG_HOST;
+    // 同样的坑：这个变量在 Vercel 上也是空字符串。空的 api_host 会让
+    // PostHog 按相对路径请求，结果打到本站域名并全部 404。
+    const host =
+      envHost && envHost.startsWith("http") ? envHost : "https://us.i.posthog.com";
     if (!key) return;
     posthog.init(key, {
-      api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
+      api_host: host,
       defaults: "2026-08-30",
       capture_pageview: "history_change",
       person_profiles: "always",
