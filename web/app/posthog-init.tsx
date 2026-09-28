@@ -27,7 +27,11 @@ export function PostHogInit() {
     // 与其继续排查 Vercel 的变量配置，不如去掉这个环节——埋点每晚上线一天，
     // 就少一天永远补不回来的访问数据。
     // （真正不能进代码的是 phx_ 开头的 Personal API Key 和 sb_secret_ 开头的那把。）
-    const key = process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "phc_qFQy4TTHKWRTkM7Vf3EFNUSaDzo4mBzew6NvsjKfvefn";
+    const envKey = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+    // 用真值判断而不是 ??：Vercel 上这个变量存在但值是空字符串，
+    // 而 ?? 只在 null/undefined 时兜底，空字符串会原样通过，
+    // 再被下面的 if (!key) 拦掉——这正是前两次部署埋点没启动的原因。
+    const key = envKey && envKey.startsWith("phc_") ? envKey : "phc_qFQy4TTHKWRTkM7Vf3EFNUSaDzo4mBzew6NvsjKfvefn";
     if (!key) return;
     posthog.init(key, {
       api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
