@@ -18,7 +18,16 @@ import posthog from "posthog-js";
  */
 export function PostHogInit() {
   useEffect(() => {
-    const key = process.env.NEXT_PUBLIC_POSTHOG_KEY;
+    // 环境变量优先，取不到就用写死的值。
+    //
+    // 直接把 key 写进代码是有意的：PostHog 的 Project API Key 按设计就是公开的，
+    // 它必然会被打进浏览器 JS，任何访客 F12 都能看到，写不写在源码里不改变这一点。
+    // 之所以不只依赖环境变量：首次部署后客户端 bundle 里查不到这个值，
+    // 说明构建时没拿到它，而 PostHog 初始化在浏览器端、必须在构建时就把值内联进去。
+    // 与其继续排查 Vercel 的变量配置，不如去掉这个环节——埋点每晚上线一天，
+    // 就少一天永远补不回来的访问数据。
+    // （真正不能进代码的是 phx_ 开头的 Personal API Key 和 sb_secret_ 开头的那把。）
+    const key = process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "phc_qFQy4TTHKWRTkM7Vf3EFNUSaDzo4mBzew6NvsjKfvefn";
     if (!key) return;
     posthog.init(key, {
       api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://us.i.posthog.com",
