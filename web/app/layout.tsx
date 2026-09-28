@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Newsreader, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
+import { PostHogInit } from "./posthog-init";
 
 const newsreader = Newsreader({ variable: "--font-newsreader", subsets: ["latin"] });
 const plexSans = IBM_Plex_Sans({
@@ -26,7 +27,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="zh-CN"
       className={`${newsreader.variable} ${plexSans.variable} ${plexMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <PostHogInit />
+        {children}
+      </body>
     </html>
   );
 }
